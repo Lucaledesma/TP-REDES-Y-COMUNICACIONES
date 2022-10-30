@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1667161128 source:c:\users\lucal\onedrive\escritorio\tp (redes y comunicaciones) - luca ledesma\tp_servidor\funciones.cpp
+	<iostream>
+	<winsock2.h>
+	<math.h>
+	<sstream>
+	<fstream>
+	<ctime>
+	<chrono>
+	<string.h>
+	"funciones.h"
+
+1667161088 c:\users\lucal\onedrive\escritorio\tp (redes y comunicaciones) - luca ledesma\tp_servidor\funciones.h
+	<iostream>
+	<winsock2.h>
+	<math.h>
+	<sstream>
+	<fstream>
+	<ctime>
+	<chrono>
+	<string.h>
+
+1667161140 source:c:\users\lucal\onedrive\escritorio\tp (redes y comunicaciones) - luca ledesma\tp_servidor\servidor.cpp
+	<iostream>
+	<winsock2.h>
+	<string.h>
+	<math.h>
+	<sstream>
+	<fstream>
+	<ctime>
+	<chrono>
+	"funciones.h"
+
