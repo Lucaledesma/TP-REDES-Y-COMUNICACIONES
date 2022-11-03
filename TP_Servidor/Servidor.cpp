@@ -7,6 +7,7 @@
 #include <ctime>
 #include <chrono>
 #include "funciones.h"
+#define TAM_BUFFER 3000
 
 using namespace std;
 
@@ -15,7 +16,7 @@ public:
     WSADATA WSAData;
     SOCKET server, client;
     SOCKADDR_IN serverAddr, clientAddr;
-    char buffer[1024];
+    char buffer[TAM_BUFFER];
 
     Server()
     {

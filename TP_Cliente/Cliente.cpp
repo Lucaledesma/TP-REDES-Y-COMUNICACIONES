@@ -6,6 +6,7 @@
 #include <ctime>
 #include <chrono>
 #include <string.h>
+#define TAM_BUFFER 3000
 
 using namespace std;
 
@@ -24,7 +25,7 @@ public:
     WSADATA WSAData;
     SOCKET server;
     SOCKADDR_IN addr;
-    char buffer[1024];
+    char buffer[TAM_BUFFER];
 
     Client()
     {
@@ -73,8 +74,8 @@ int main()
         string operacion;
 
         menu();
-        char opMenu[1024];
-        cin.getline(opMenu,1024,'\n');
+        char opMenu[TAM_BUFFER];
+        cin.getline(opMenu,TAM_BUFFER,'\n');
 
         Cliente->Enviar(opMenu);
 
@@ -82,13 +83,13 @@ int main()
 
         if(opcion=="1"){
 
-            char result[1024] = "";
+            char result[TAM_BUFFER] = "";
 
             while(strcmp(result,"volver")!=0){
                 cout << "\nOPERACIONES DISPONIBLES : (a+b) | (a-b) | (a*b) | (a/b) | (a^b) | (a!) | Volver al menu: 'volver'" << endl;
                 cout << "INGRESA LA OPERACION : " << endl;
 
-                cin.getline(result,1024,'\n');
+                cin.getline(result,TAM_BUFFER,'\n');
 
                 if (strcmp(result,"volver")!=0){
                     Cliente->Enviar(result);
