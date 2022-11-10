@@ -1,0 +1,28 @@
+2022-11-10_14:9 ============================
+2022-11-10_14:9 =======Inicia Servidor=======
+2022-11-10_14:9 ============================
+2022-11-10_14:9 Socket creado. Puerto de escucha:5000.
+2022-11-10_14:9 Conexion Aceptada
+2022-11-10_14:10 Cliente: 95*/4 ---> No se pudo realizar la operacion. La operacion esta mal formada: 95*/4
+2022-11-10_14:10 Cliente: 9+54 ---> Resultado: 63
+2022-11-10_14:10 Cliente: *5 ---> No se pudo realizar la operacion. La operacion esta mal formada: *5
+2022-11-10_14:10 Cliente: 5 ---> Resultado: 5
+2022-11-10_14:10 Cliente: 9-20 ---> Resultado: -11
+2022-11-10_14:10 Cliente: 11^3 ---> Resultado: 1331
+2022-11-10_14:10 Cliente: 5! ---> Resultado: 120
+2022-11-10_14:11 Cliente: 10*5a50 ---> No se pudo realizar la operacion, se encontro un caracter no valido: a
+2022-11-10_14:11 Cliente: 12!5 ---> No se pudo realizar la operacion. La operacion esta mal formada: 12!5
+2022-11-10_14:11 Cliente: !12 ---> No se pudo realizar la operacion. La operacion esta mal formada: !12
+2022-11-10_14:11 Cliente:  ---> La operacion tiene que tener entre 1 y 20 caracteres.
+2022-11-10_14:11 Cliente: 123456789+9876543210 ---> La operacion tiene que tener entre 1 y 20 caracteres.
+2022-11-10_14:11 Cliente: 10/8 ---> Resultado: 1
+2022-11-10_14:11 El Cliente solicito ver el Archivo.
+2022-11-10_14:12 Conexion Cerrada.
+
+2022-11-10_14:12 ============================
+2022-11-10_14:12 =======Inicia Servidor=======
+2022-11-10_14:12 ============================
+2022-11-10_14:12 Socket creado. Puerto de escucha:5000.
+2022-11-10_14:12 Conexion Aceptada
+2022-11-10_14:15 Conexion Cerrada por Inactividad.
+

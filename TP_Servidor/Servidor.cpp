@@ -6,7 +6,7 @@
 #include <fstream>
 #include <ctime>
 #include "funciones.h"
-#define TAM_BUFFER 3000
+#define TAM_BUFFER 2048
 
 using namespace std;
 

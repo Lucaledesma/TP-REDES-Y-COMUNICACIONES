@@ -5,7 +5,7 @@
 #include <sstream>
 #include <fstream>
 #include <ctime>
-#define TAM_BUFFER 3000
+#define TAM_BUFFER 2048
 
 using namespace std;
 
@@ -134,7 +134,7 @@ int main()
 
         } else if (opcion=="0"){
             Cliente->Enviar("inactive");
-            cout << "Lo sentimos. Tiempo de espera agotado." << endl;
+            cout << "\nCliente desconectado por inactividad." << endl;
             Cliente->CerrarSocket();
 
             system("pause");
