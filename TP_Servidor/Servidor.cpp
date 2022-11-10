@@ -5,7 +5,6 @@
 #include <sstream>
 #include <fstream>
 #include <ctime>
-#include <chrono>
 #include "funciones.h"
 #define TAM_BUFFER 3000
 
@@ -182,7 +181,7 @@ public:
 
         }
         else{;
-            resp = "La operacion tiene que tener entre 1 y 20 caracteres";
+            resp = "La operacion tiene que tener entre 1 y 20 caracteres.";
             return resp;
         }
     };
@@ -195,8 +194,8 @@ int main()
     Calculadora *Calcu = new Calculadora();
     int i = 0;
 
-    while(i==0)
-    {
+    while(i==0){
+
         string opMenu;
         opMenu = Servidor->Recibir();
 
@@ -213,7 +212,7 @@ int main()
         do{
             op = Servidor->Recibir();
 
-            if((op!="archivo") && (op!="close") && (op!="volver")){
+            if((op!="archivo") && (op!="close") && (op!="inactive") && (op!="volver")){
 
                 string resp = Calcu->Respuesta(op);
 
@@ -240,18 +239,26 @@ int main()
                 Servidor->Enviar(arc);
 
                 string s = tiempoActual();
-                s = s + " El Cliente solicito ver el Archivo";
+                s = s + " El Cliente solicito ver el Archivo.";
                 aniadir(s);
             }
             else if(op=="close"){
 
                 string s = tiempoActual();
-                s = s + " Conexion Terminada\n";
+                s = s + " Conexion Cerrada.\n";
                 aniadir(s);
                 i++;
 
             }
-        }while((op!="archivo") && (op!="close") && (op!="volver"));
+            else if(op=="inactive"){
+
+                string s = tiempoActual();
+                s = s + " Conexion Cerrada por Inactividad.\n";
+                aniadir(s);
+                i++;
+
+            }
+        }while((op!="archivo") && (op!="close") && (op!="inactive") && (op!="volver"));
 
     }
 

@@ -1,11 +1,10 @@
 #include <iostream>
 #include <winsock2.h>
+#include <string.h>
 #include <math.h>
 #include <sstream>
 #include <fstream>
 #include <ctime>
-#include <chrono>
-#include <string.h>
 #define TAM_BUFFER 3000
 
 using namespace std;
@@ -67,15 +66,25 @@ int main()
     cout << "TP REDES - CALCULADORA" << endl;
     Client *Cliente = new Client();
 
+    clock_t t;
     string opcion = "";
 
-    while(opcion != "3")
-    {
+    while((opcion != "0") && (opcion != "3")){
+
         string operacion;
 
         menu();
         char opMenu[TAM_BUFFER];
+
+        t = clock();
+
         cin.getline(opMenu,TAM_BUFFER,'\n');
+
+        t = clock()-t;
+
+        if ((int(t)/CLOCKS_PER_SEC) > 120){
+            strcpy(opMenu, "0");
+        }
 
         Cliente->Enviar(opMenu);
 
@@ -117,8 +126,15 @@ int main()
 
             system("pause");
 
-        } else {
+        } else if (opcion=="3"){
             Cliente->Enviar("close");
+            Cliente->CerrarSocket();
+
+            system("pause");
+
+        } else if (opcion=="0"){
+            Cliente->Enviar("inactive");
+            cout << "Lo sentimos. Tiempo de espera agotado." << endl;
             Cliente->CerrarSocket();
 
             system("pause");
@@ -126,5 +142,7 @@ int main()
 
         system("cls");
     }
+
+    cout << "Gracias por participar!" << endl;
 
 }
